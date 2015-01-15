@@ -5,8 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Store</th>
-      <th>Store name</th>
+      <th>商店名稱</th>
       <th>User</th>
       <th>Status</th>
       <th>Reject reason</th>
@@ -24,7 +23,6 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr>
-        <td><%= order.store_id %></td>
         <td><%= order.store_name %></td>
         <td><%= order.user_id %></td>
         <td><%= order.status %></td>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  store_id: 1
+  store_name: MyString
+  user_id: 1
+  status: 1
+  reject_reason: MyString
+  content: MyString
+  accepted_at: 2015-01-15 14:23:24
+  finished_at: 2015-01-15 14:23:24
+  order_fee: 1
+  delivery_fee: 1
+  items_fee: 1
+  tip: 1
+
+two:
+  store_id: 1
+  store_name: MyString
+  user_id: 1
+  status: 1
+  reject_reason: MyString
+  content: MyString
+  accepted_at: 2015-01-15 14:23:24
+  finished_at: 2015-01-15 14:23:24
+  order_fee: 1
+  delivery_fee: 1
+  items_fee: 1
+  tip: 1

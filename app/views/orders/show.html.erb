@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Store:</strong>
+  <%= @order.store_id %>
+</p>
+
+<p>
+  <strong>Store name:</strong>
+  <%= @order.store_name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @order.user_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @order.status %>
+</p>
+
+<p>
+  <strong>Reject reason:</strong>
+  <%= @order.reject_reason %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @order.content %>
+</p>
+
+<p>
+  <strong>Accepted at:</strong>
+  <%= @order.accepted_at %>
+</p>
+
+<p>
+  <strong>Finished at:</strong>
+  <%= @order.finished_at %>
+</p>
+
+<p>
+  <strong>Order fee:</strong>
+  <%= @order.order_fee %>
+</p>
+
+<p>
+  <strong>Delivery fee:</strong>
+  <%= @order.delivery_fee %>
+</p>
+
+<p>
+  <strong>Items fee:</strong>
+  <%= @order.items_fee %>
+</p>
+
+<p>
+  <strong>Tip:</strong>
+  <%= @order.tip %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

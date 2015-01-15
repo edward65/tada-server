@@ -1,64 +1,73 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Store:</strong>
-  <%= @order.store_id %>
-</p>
 
-<p>
-  <strong>Store name:</strong>
-  <%= @order.store_name %>
-</p>
+<div class="row">
 
-<p>
-  <strong>User:</strong>
-  <%= @order.user_id %>
-</p>
+  <div class="col-md-3">
+    <p>
+      <b>商店名稱:</b>
+      <%= @order.store_name %>
+    </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @order.status %>
-</p>
+    <p>
+      <b>使用者:</b>
+      <%= @order.user_id %>
+    </p>
 
-<p>
-  <strong>Reject reason:</strong>
-  <%= @order.reject_reason %>
-</p>
+    <p>
+      <b>訂單內容:</b>
+      <%= @order.content %>
+    </p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @order.content %>
-</p>
+    <p>
+      <b>狀態:</b>
+      <%= @order.status %>
+    </p>
 
-<p>
-  <strong>Accepted at:</strong>
-  <%= @order.accepted_at %>
-</p>
+    <p>
+      <b>拒絕原因:</b>
+      <%= @order.reject_reason %>
+    </p>
 
-<p>
-  <strong>Finished at:</strong>
-  <%= @order.finished_at %>
-</p>
+    <p>
+      <b>訂單接受時間:</b>
+      <%= @order.accepted_at %>
+    </p>
 
-<p>
-  <strong>Order fee:</strong>
-  <%= @order.order_fee %>
-</p>
+    <p>
+      <b>訂單完成時間:</b>
+      <%= @order.finished_at %>
+    </p>
 
-<p>
-  <strong>Delivery fee:</strong>
-  <%= @order.delivery_fee %>
-</p>
+    <p>
+      <b>總費用:</b>
+      <%= @order.order_fee %>
+    </p>
 
-<p>
-  <strong>Items fee:</strong>
-  <%= @order.items_fee %>
-</p>
+    <p>
+      <b>遞送費用:</b>
+      <%= @order.delivery_fee %>
+    </p>
 
-<p>
-  <strong>Tip:</strong>
-  <%= @order.tip %>
-</p>
+    <p>
+      <b>商品費用:</b>
+      <%= @order.items_fee %>
+    </p>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+    <p>
+      <b>小費:</b>
+      <%= @order.tip %>
+    </p>
+
+
+
+
+    <p>
+      <%= link_to '編輯', edit_order_path(@order) %> |
+      <%= link_to '返回', orders_path %>
+    </p>
+  </div>
+
+
+</div>
+

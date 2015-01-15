@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @user.location %>
+</p>
+
+<p>
+  <strong>Tele:</strong>
+  <%= @user.tele %>
+</p>
+
+<p>
+  <strong>Verify code:</strong>
+  <%= @user.verify_code %>
+</p>
+
+<p>
+  <strong>Fb token:</strong>
+  <%= @user.fb_token %>
+</p>
+
+<p>
+  <strong>Notification token:</strong>
+  <%= @user.notification_token %>
+</p>
+
+<p>
+  <strong>Invite code:</strong>
+  <%= @user.invite_code %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @user.status %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

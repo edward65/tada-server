@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150115062324) do
+ActiveRecord::Schema.define(version: 20150115091504) do
 
   create_table "orders", force: :cascade do |t|
     t.integer  "store_id"
@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(version: 20150115062324) do
     t.integer  "tip"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "location"
+    t.string   "tele"
+    t.string   "verify_code"
+    t.string   "fb_token"
+    t.string   "notification_token"
+    t.string   "invite_code"
+    t.string   "email"
+    t.integer  "status",             limit: 1
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
 end

@@ -4,6 +4,44 @@ Rails.application.routes.draw do
   root to: redirect('/orders')
   resources :orders
 
+
+  MISSING_JSON_PATH = "general#append_json"
+
+
+
+  def api_get(params)
+    uri, path = params.first
+    get "#{uri}.json" => path, :format => "json"
+    get uri => MISSING_JSON_PATH
+  end
+
+  def api_post(params)
+    uri, path = params.first
+    post "#{uri}.json" => path, :format => "json"
+    post uri => MISSING_JSON_PATH
+  end
+
+  def api_delete(params)
+    uri, path = params.first
+    delete "#{uri}.json" => path, :format => "json"
+    delete uri => MISSING_JSON_PATH
+  end
+
+  def api_put(params)
+    uri, path = params.first
+    put "#{uri}.json" => path, :format => "json"
+    put uri => MISSING_JSON_PATH
+  end
+
+
+
+  api_get "api/v1/getorder" => "api/v1/api_orders#index_ok"
+  api_post "api/v1/postorder" => "api/v1/api_orders#create_ok"
+  api_put "api/v1/putorder" => "api/v1/api_orders#update_ok"
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

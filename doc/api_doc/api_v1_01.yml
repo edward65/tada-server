@@ -1,0 +1,128 @@
+## api_v1_01版
+
+
+
+正式機-使用domain name: "http://manage.tada.tw"  (heroku_production)
+測試機-使用domain name: "http://manage-dev.tada.tw" (heroku_staging)
+
+
+功能列表:
+ - user_register:使用者註冊
+ - user_login:使用者登入
+ - verify_code:使用者確認驗證碼
+ - service_notify:使用者服務通知登記
+ - register_email:登錄電子信箱
+ - add_order:增加訂購單
+ - order_status:更新訂購單狀態
+ - user_order_sign:使用者簽收
+
+使用API:
+
+  功能: 使用者註冊
+  POST /user_register:
+    傳入:
+      user_name: 使用者名稱
+      location: 所在行政區
+      phone_number: 使用者電話號碼
+      invite_code: 邀請碼
+    回傳:
+      成功:> { "success": true }
+      失敗:> { }
+
+  功能: 使用者登入
+  POST /user_login:
+    傳入:
+      phone_number: 使用者電話號碼
+    回傳:
+      成功:> { "success": true }
+      失敗:> { }
+
+  功能: 使用者確認驗證碼
+  POST /verify_code:
+    傳入:
+      phone_number: 使用者電話號碼
+      verify_code: 驗證碼
+    回傳:
+      成功:> { "success": true }
+      失敗:> { }
+
+  功能: 使用者服務通知登記
+  POST /service_notify:
+    傳入:
+      user_name: 使用者名稱
+      location: 所在行政區
+      phone_number: 使用者電話號碼
+      email: 電子信箱
+    回傳:
+      成功:> { "success": true }
+      失敗:> { }
+
+
+  功能: 登錄電子信箱
+  POST /register_email:
+    傳入:
+      phone_number: 使用者電話號碼
+      email: 電子信箱
+    回傳:
+      成功:> { "success": true }
+      失敗:> { }
+
+  功能: 增加訂購單
+  POST /add_order:
+    傳入:
+      phone_number: 使用者電話號碼
+      store_name: 商店名稱
+      items: 購買品項
+    回傳:
+      成功:> { "success": true, "order_id": "122" }
+      失敗:> { }
+
+
+  功能: 讀取訂購單狀態
+  GET /order_status:
+    傳入:
+      phone_number: 使用者電話號碼
+      order_id: 訂單號碼
+    回傳:
+      成功:> { "success": true, "order_status": "1" }  
+
+        # 0:新單、1:接受、2:拒絕、4:完成、5:失效
+      失敗:> { }
+
+
+  功能: 使用者簽收
+  POST /user_order_sign:
+    傳入:
+      phone_number: 使用者電話號碼
+      tip: 小費
+    回傳:
+      成功:> { "success": true }
+      失敗:> { }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

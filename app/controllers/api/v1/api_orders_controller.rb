@@ -28,6 +28,10 @@ class Api::V1::ApiOrdersController < ApplicationController
     user_id = params[:user_id]
     store_name = params[:store_name]
     items = params[:items]
+    receive_place = params[:receive_place]
+    receive_address = params[:receive_address]
+    receive_phone = params[:receive_phone]
+    receive_note = params[:receive_note]
 
 
     if user_id.present? and store_name.present? and items.present?
@@ -35,6 +39,10 @@ class Api::V1::ApiOrdersController < ApplicationController
               :user_id => user_id,
               :store_name => store_name,
               :content => items,
+              :receive_place => receive_place,
+              :receive_address => receive_address,
+              :receive_phone => receive_phone,
+              :receive_note => receive_note,
               :status => 0
             )
         result = true

@@ -73,6 +73,10 @@
       user_id: 使用者ID
       store_name: 商店名稱
       items: 購買品項
+      receive_place: 購買品項
+      receive_address: 購買品項
+      receive_phone: 購買品項
+      receive_note: 購買品項
     回傳:
       成功:> { "success": true, "order_id": "122" }
       失敗:> { }

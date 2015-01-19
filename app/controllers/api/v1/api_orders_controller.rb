@@ -11,30 +11,37 @@ class Api::V1::ApiOrdersController < ApplicationController
   end
 
 
-  def create_ok
 
-  	    puts "Edward ===22==create_ok====okoko" 
 
+  # POST /add_order:
+    #傳入:
+      #user_id: 使用者ID
+      #store_name: 商店名稱
+      #items: 購買品項
+    #回傳:
+      #成功:> { "success": true, "order_id": "122" }
+      #失敗:> { }
+
+  def create_order
 
     result = false
+    user_id = params[:user_id]
     store_name = params[:store_name]
-    content = params[:content]
+    items = params[:items]
 
 
-    puts content
-
-
-    if store_name.present? and content.present?
-      # check if this user had answered
-            Order.create(
+    if user_id.present? and store_name.present? and items.present?
+        order = Order.create(
+              :user_id => user_id,
               :store_name => store_name,
-              :content => content
+              :content => items,
+              :status => 0
             )
         result = true
       
     end
 
-    render :json => result ? {"success" => true } : {}
+    render :json => result ? {"success" => true ,"order_id" =>order.id} : {}
   end
 
 

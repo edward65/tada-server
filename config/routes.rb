@@ -36,7 +36,7 @@ Rails.application.routes.draw do
 
 
   api_get "api/v1/getorder" => "api/v1/api_orders#index_ok"
-  api_post "api/v1/postorder" => "api/v1/api_orders#create_ok"
+  api_post "api/v1/add_order" => "api/v1/api_orders#create_order"
   api_put "api/v1/putorder" => "api/v1/api_orders#update_ok"
 
 

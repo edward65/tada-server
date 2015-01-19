@@ -26,7 +26,7 @@
       phone_number: 使用者電話號碼
       invite_code: 邀請碼
     回傳:
-      成功:> { "success": true }
+      成功:> { "success": true ,, "user_id": "122" }
       失敗:> { }
 
   功能: 使用者登入
@@ -34,7 +34,7 @@
     傳入:
       phone_number: 使用者電話號碼
     回傳:
-      成功:> { "success": true }
+      成功:> { "success": true , "user_id": "122" }
       失敗:> { }
 
   功能: 使用者確認驗證碼
@@ -61,7 +61,7 @@
   功能: 登錄電子信箱
   POST /register_email:
     傳入:
-      phone_number: 使用者電話號碼
+      user_id: 使用者ID
       email: 電子信箱
     回傳:
       成功:> { "success": true }
@@ -70,7 +70,7 @@
   功能: 增加訂購單
   POST /add_order:
     傳入:
-      phone_number: 使用者電話號碼
+      user_id: 使用者ID
       store_name: 商店名稱
       items: 購買品項
     回傳:
@@ -81,7 +81,7 @@
   功能: 讀取訂購單狀態
   GET /order_status:
     傳入:
-      phone_number: 使用者電話號碼
+      user_id: 使用者ID
       order_id: 訂單號碼
     回傳:
       成功:> { "success": true, "order_status": "1" }  
@@ -93,7 +93,7 @@
   功能: 使用者簽收
   POST /user_order_sign:
     傳入:
-      phone_number: 使用者電話號碼
+      user_id: 使用者ID
       tip: 小費
     回傳:
       成功:> { "success": true }

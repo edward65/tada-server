@@ -7,12 +7,13 @@
 <table>
   <thead>
     <tr>
+      <th>訂單ID</th>
       <th>商店名稱</th>
       <th>使用者</th>
       <th>狀態</th>
       <th>拒絕原因</th>
       <th>訂單內容</th>
-      <th>訂單接受時間</th>
+      <th>訂單建立時間</th>
       <th>訂單完成時間</th>
       <th>總費用</th>
       <th>遞送費用</th>
@@ -25,12 +26,13 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr>
+        <td><%= order.id %></td>
         <td><%= order.store_name %></td>
         <td><%= order.user_id %></td>
         <td><%= order.status %></td>
         <td><%= order.reject_reason %></td>
         <td><%= order.content %></td>
-        <td><%= order.accepted_at %></td>
+        <td><%= order.created_at %></td>
         <td><%= order.finished_at %></td>
         <td><%= order.order_fee %></td>
         <td><%= order.delivery_fee %></td>
@@ -47,4 +49,6 @@
 <br>
 
 <%= link_to '手動增加訂單', new_order_path %>
+<p></p>
+<p>訂單狀態：0:新單、1:接受、2:拒絕、4:完成、5:失效</p>
 

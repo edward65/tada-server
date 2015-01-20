@@ -34,10 +34,18 @@ Rails.application.routes.draw do
   end
 
 
+  #訂單
+  api_post "api/v1/add_order" => "api/v1/api_orders#create_order"
 
   api_get "api/v1/getorder" => "api/v1/api_orders#index_ok"
-  api_post "api/v1/add_order" => "api/v1/api_orders#create_order"
   api_put "api/v1/putorder" => "api/v1/api_orders#update_ok"
+
+  #user
+  api_post "api/v1/user_register" => "api/v1/api_users#create_user"
+  api_post "api/v1/verify_code" => "api/v1/api_users#verify_code"
+
+  api_get "api/v1/test_api" => "api/v1/api_users#test_api"
+
 
 
 

@@ -26,8 +26,12 @@
       phone_number: 使用者電話號碼
       invite_code: 邀請碼
     回傳:
-      成功:> { "success": true ,, "user_id": "122" }
-      失敗:> { }
+      成功:> { "success": true , "user_id": "122" }
+      失敗:> { "error": "0" } 
+
+      # error code: 0-unknow error、1-已經是會員、2-邀請碼無效
+
+
 
   功能: 使用者登入
   POST /user_login:
@@ -37,14 +41,23 @@
       成功:> { "success": true , "user_id": "122" }
       失敗:> { }
 
+      # error code: 0-unknow error、1-資料不足、2-查無ID、3-驗證碼錯誤、4-停用
+
+
+
+
   功能: 使用者確認驗證碼
   POST /verify_code:
     傳入:
-      phone_number: 使用者電話號碼
+      user_id: 使用者ID
       verify_code: 驗證碼
     回傳:
       成功:> { "success": true }
-      失敗:> { }
+      失敗:> { "error": "0" }
+
+      # error code: 0-unknow error、1-資料不足、2-查無ID、3-驗證碼錯誤
+
+
 
   功能: 使用者服務通知登記
   POST /service_notify:
@@ -55,7 +68,7 @@
       email: 電子信箱
     回傳:
       成功:> { "success": true }
-      失敗:> { }
+      失敗:> { "error": "0" }
 
 
   功能: 登錄電子信箱

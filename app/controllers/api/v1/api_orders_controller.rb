@@ -43,7 +43,7 @@ class Api::V1::ApiOrdersController < ApplicationController
               :receive_address => receive_address,
               :receive_phone => receive_phone,
               :receive_note => receive_note,
-              :status => 0
+              :status => 0  #0:新單、1:接受、2:拒絕、4:完成、5:失效
             )
         result = true
       
